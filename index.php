@@ -1,7 +1,9 @@
 <?php 
     require('class/Autoloader.php');
+    // require('class/Debug.php');
     Autoloader::register();
-    // Debug::monDebug($article);
+    use Outils\Debug;
+
 ?> 
 
 <!DOCTYPE html>
@@ -28,6 +30,9 @@
     
     $article2 = new Article("Découverte de l'année", "lorem lorem lorem", "2021-04-12");
     $article2->afficher();
+
+    Debug::monDebug($article1);
+    Debug::monDebug($article2);
 ?> 
 
     
